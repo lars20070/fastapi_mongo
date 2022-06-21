@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "fastapi-mongo"
+version = "0.1.0"
+description = ""
+authors = ["Lars Nilse <lars.nilse@extern.sick.de>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+motor = {version = "2.5.1"}
+fastapi = ">=0.74"
+pymongo = {extras = ["srv"], version = ">=3.12"}
+pydantic = {extras = ["email"], version = "*"}
+
+[tool.poetry.dev-dependencies]
+uvicorn = {extras = ["standard"], version = ">=0"}
+pytest = ">=6"
+requests = ">=0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "artifactory"
+url = "http://deagxartifactory.sickcn.net/artifactory/api/pypi/pypi/simple"
+default = true
